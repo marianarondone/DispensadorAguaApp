@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "517759223758",
+    "project_id": "dispensadoragua-bbd82",
+    "storage_bucket": "dispensadoragua-bbd82.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517759223758:android:fc4e89dfd33a86d795cd9f",
+        "android_client_info": {
+          "package_name": "com.dispensadoragua"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD701CFVnJiSjeLghNRj8OwpFXW3Ytkans"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

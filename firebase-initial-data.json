@@ -1,0 +1,26 @@
+{
+  "device_status": {
+    "connected": true,
+    "power_on": true,
+    "in_use": false,
+    "water_level": 85,
+    "last_update": 1700000000000,
+    "wifi_rssi": -45
+  },
+  "device_control": {
+    "programming_enabled": false,
+    "schedule_time": "08:00",
+    "dispense_amount": 250,
+    "last_command": 0
+  },
+  "notifications": {
+    "low_water": false,
+    "disconnected": false,
+    "error_code": "",
+    "timestamp": 0
+  },
+  "manual_dispense": {
+    "amount": 0,
+    "timestamp": 0
+  }
+}

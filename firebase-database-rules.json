@@ -1,0 +1,73 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "device_status": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".validate": "newData.hasChildren(['connected', 'power_on', 'in_use', 'water_level', 'last_update', 'wifi_rssi'])",
+      "connected": {
+        ".validate": "newData.isBoolean()"
+      },
+      "power_on": {
+        ".validate": "newData.isBoolean()"
+      },
+      "in_use": {
+        ".validate": "newData.isBoolean()"
+      },
+      "water_level": {
+        ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100"
+      },
+      "last_update": {
+        ".validate": "newData.isNumber()"
+      },
+      "wifi_rssi": {
+        ".validate": "newData.isNumber()"
+      }
+    },
+    "device_control": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".validate": "newData.hasChildren(['programming_enabled', 'schedule_time', 'dispense_amount', 'last_command'])",
+      "programming_enabled": {
+        ".validate": "newData.isBoolean()"
+      },
+      "schedule_time": {
+        ".validate": "newData.isString()"
+      },
+      "dispense_amount": {
+        ".validate": "newData.isNumber() && newData.val() >= 50 && newData.val() <= 500"
+      },
+      "last_command": {
+        ".validate": "newData.isNumber()"
+      }
+    },
+    "notifications": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".validate": "newData.hasChildren(['low_water', 'disconnected', 'error_code', 'timestamp'])",
+      "low_water": {
+        ".validate": "newData.isBoolean()"
+      },
+      "disconnected": {
+        ".validate": "newData.isBoolean()"
+      },
+      "error_code": {
+        ".validate": "newData.isString()"
+      },
+      "timestamp": {
+        ".validate": "newData.isNumber()"
+      }
+    },
+    "manual_dispense": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "amount": {
+        ".validate": "newData.isNumber() && newData.val() >= 50 && newData.val() <= 500"
+      },
+      "timestamp": {
+        ".validate": "newData.isNumber()"
+      }
+    }
+  }
+}
